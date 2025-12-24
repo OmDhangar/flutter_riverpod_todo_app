@@ -24,15 +24,14 @@ app.use(helmet({
 // CORS Configuration
 // ===========================================
 const corsOptions = {
-  origin: process.env.ALLOWED_ORIGINS 
-    ? process.env.ALLOWED_ORIGINS.split(',') 
-    : '*',
-  credentials: true,
-  optionsSuccessStatus: 200,
+  origin: '*', // allow all origins for now
   methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-API-Key']
+  allowedHeaders: ['Content-Type', 'Authorization', 'x-api-key'],
+  optionsSuccessStatus: 200,
 };
+
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 // ===========================================
 // Body Parsing Middleware
@@ -201,5 +200,6 @@ process.on('SIGTERM', () => {
 
 // Start the server
 startServer();
+
 
 module.exports = app;

@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         primaryColor: Colors.cyan,
         scaffoldBackgroundColor: const Color(0xFF0E0E10),
-        cardColor: const Color(0x16161A).withOpacity(0.5),
+        cardColor: const Color(0x0016161a).withOpacity(0.5),
         textTheme: const TextTheme(
           bodyLarge: TextStyle(color: Colors.white),
           bodyMedium: TextStyle(color: Colors.white70),

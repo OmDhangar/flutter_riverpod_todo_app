@@ -100,7 +100,7 @@ class ClassificationPreviewScreen extends StatelessWidget {
         Text(title, style: const TextStyle(color: Colors.white70, fontSize: 16)),
         const SizedBox(height: 8),
         DropdownButtonFormField<String>(
-          value: items.first,
+          initialValue: items.first,
           items: items.map((item) {
             return DropdownMenuItem(value: item, child: Text(item));
           }).toList(),

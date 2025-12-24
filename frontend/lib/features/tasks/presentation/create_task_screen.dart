@@ -17,12 +17,12 @@ class CreateTaskScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Expanded(
+            const Expanded(
               child: TextField(
                 maxLines: null,
                 expands: true,
                 textAlignVertical: TextAlignVertical.top,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   hintText: 'Describe your task in plain English...',
                 ),
               ),
